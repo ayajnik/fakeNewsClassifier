@@ -12,3 +12,6 @@ In this file we have to setup two things:
 
 ![Alt text](<Screenshot 2023-12-04 at 2.20.46 PM.png>)
 
+We created .gitkeep file because we need atleast one file to be created in our project setup. Once we setup our deployment pipeline, we will delete that file.
+
+

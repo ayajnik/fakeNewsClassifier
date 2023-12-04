@@ -14,4 +14,9 @@ In this file we have to setup two things:
 
 We created .gitkeep file because we need atleast one file to be created in our project setup. Once we setup our deployment pipeline, we will delete that file.
 
+# Setting environment and setup.py file
+
+1. Create requirements.txt file
+2. Update the ReadMe.md file
+3. Modify the setup.py file so that we can deploy this project as package
 

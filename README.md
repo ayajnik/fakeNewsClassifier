@@ -44,4 +44,10 @@ In this section, we will highlight the file that will be updated regularly in ou
 
 We are going to take the data and compress it and store it in google drive. Post that we will use gdown library in python, download it on our project and then unzip the file. We will then going to create an artifacts folder and then create the data ingestion pipeline.
 
+# Prepare base model
 
+After working on the data ingestion, prepare the model and save it in h5 model format in the artifacts folder.
+
+Follow the same project workflow.
+
+# Model training

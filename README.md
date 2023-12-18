@@ -20,3 +20,9 @@ We created .gitkeep file because we need atleast one file to be created in our p
 2. Update the ReadMe.md file
 3. Modify the setup.py file so that we can deploy this project as package
 
+# Setting a custom logger and exception.
+
+In the textClassifier, we will create the custom logger. The logger will be created in __init__.py file This will able to capture all the logs that will be generated while running our project.
+
+Now we will create our exception. For this we will be using box-exception library and this library will help us in creating the exception errors that might come across while executing the project.
+

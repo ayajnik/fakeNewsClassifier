@@ -24,5 +24,5 @@ We created .gitkeep file because we need atleast one file to be created in our p
 
 In the textClassifier, we will create the custom logger. The logger will be created in __init__.py file This will able to capture all the logs that will be generated while running our project.
 
-Now we will create our exception. For this we will be using box-exception library and this library will help us in creating the exception errors that might come across while executing the project.
+Now we will create our exception. For this we will be using box-exception library and this library will help us in creating the exception errors that might come across while executing the project. This will be created in the utils folder in common.py file.
 

@@ -1,3 +1,8 @@
 ## model hyperparameter tuning file
-
-key: val
+sen_length: 20
+vocab_size: 5000
+sent_length: 20
+vocab: 5000
+epochs: 5
+batch_size: 64
+LEARNING_RATE: 0.01

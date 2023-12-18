@@ -10,3 +10,14 @@ class DataIngestionConfig:
     source_URL: str
     local_data_file: Path
     unzip_dir: Path
+
+@dataclass(frozen=True)
+class PrepareModelConfig:
+    root_dir: Path
+    model_path: Path
+    params_learning_rate: str
+    params_epoch: int
+    params_batch_size: int
+    params_vocab: int
+    params_sent_length: int
+    params_sen_length: int

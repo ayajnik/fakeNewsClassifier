@@ -1,6 +1,6 @@
-from textclassifier.config.configuration import ConfigurationManager
-from textclassifier.components.data_ingestion import DataIngestion
-from textclassifier import logger
+from src.textclassifier.config.configuration import ConfigurationManager
+from src.textclassifier.components.data_ingestion import DataIngestion
+from src.textclassifier import logger
 
 STAGE_NAME = "Data Ingestion stage"
 

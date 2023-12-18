@@ -3,7 +3,7 @@ import zipfile
 import gdown
 from src.textclassifier import logger
 from src.textclassifier.utils.common import get_size
-from textclassifier.entity.config_entity import DataIngestionConfig
+from src.textclassifier.entity.config_entity import DataIngestionConfig
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):

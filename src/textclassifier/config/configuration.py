@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from src.textclassifier.constants import *
 from src.textclassifier.utils.common import read_yaml, create_directories
-from textclassifier.entity.config_entity import DataIngestionConfig
+from src.textclassifier.entity.config_entity import (DataIngestionConfig,PrepareModelConfig)
 
 ## reading the constant values from yaml file and then creating the root directory as stated in config.yaml
 
@@ -30,3 +30,21 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+
+    def get_prepare_base_model_config(self) -> PrepareModelConfig:
+        config = self.config.prepare_base_model
+        
+        create_directories([config.root_dir])
+
+        prepare_base_model_config = PrepareModelConfig(
+            root_dir=Path(config.root_dir),
+            model_path=Path(config.model_path),
+            params_learning_rate=self.params.LEARNING_RATE,
+            params_epoch = self.params.epochs,
+            params_batch_size = self.params.batch_size,
+            params_vocab = self.params.vocab,
+            params_sent_length = self.params.sent_length,
+            params_sen_length = self.params.sen_length
+        )
+
+        return prepare_base_model_config

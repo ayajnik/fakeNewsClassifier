@@ -21,3 +21,15 @@ class PrepareModelConfig:
     params_vocab: int
     params_sent_length: int
     params_sen_length: int
+
+@dataclass(frozen=True)
+class TrainingConfig:
+    root_dir: Path
+    base_model_path: Path
+    trained_model_path: Path
+    training_data: Path
+    params_is_epochs: int
+    params_is_batch_size: int
+    params_is_vocab: int
+    params_is_sent_length: int
+    params_is_sen_length: int

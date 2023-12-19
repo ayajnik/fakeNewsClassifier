@@ -1,8 +1,11 @@
 from dataclasses import dataclass
 from pathlib import Path
+import os
+import tensorflow as tf
 from src.textclassifier.constants import *
 from src.textclassifier.utils.common import read_yaml, create_directories
-from src.textclassifier.entity.config_entity import (DataIngestionConfig,PrepareModelConfig)
+from src.textclassifier.entity.config_entity import (DataIngestionConfig,PrepareModelConfig,
+                                                        TrainingConfig)
 
 ## reading the constant values from yaml file and then creating the root directory as stated in config.yaml
 
@@ -48,3 +51,26 @@ class ConfigurationManager:
         )
 
         return prepare_base_model_config
+
+    def get_training_config(self) -> TrainingConfig:
+        training = self.config.training
+        prepare_base_model = self.config.prepare_base_model
+        params = self.params
+        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "train.csv")
+        create_directories([
+            Path(training.root_dir)
+        ])
+
+        training_config = TrainingConfig(
+            root_dir=Path(training.root_dir),
+            trained_model_path = Path(training.trained_model_path),
+            base_model_path=Path(prepare_base_model.model_path),
+            training_data=Path(training_data),
+            params_is_epochs=params.EPOCHS,
+            params_is_batch_size=params.BATCH_SIZE,
+            params_is_vocab=params.vocab,
+            params_is_sent_length=params.sent_length,
+            params_is_sen_length=params.sen_length
+        )
+
+        return training_config

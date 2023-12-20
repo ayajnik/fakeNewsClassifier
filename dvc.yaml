@@ -31,13 +31,18 @@ stages:
     deps:
       - src/textclassifier/pipeline/stage_03_model_training.py
       - config/config.yaml
-      - artifacts/data_ingestion/kidney-ct-scan-image
+      - artifacts/data_ingestion/train.csv
       - artifacts/prepare_base_model
     params:
-      - IMAGE_SIZE
-      - EPOCHS
-      - BATCH_SIZE
-      - AUGMENTATION
+      - root_dir
+      - base_model_path
+      - trained_model_path
+      - training_data
+      - params_is_epochs
+      - params_is_batch_size
+      - params_is_vocab
+      - params_is_sent_length
+      - params_is_sen_length
     outs:
       - artifacts/training/model.h5
 

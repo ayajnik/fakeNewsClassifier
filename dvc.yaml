@@ -52,11 +52,18 @@ stages:
     deps:
       - src/textclassifier/pipeline/stage_04_model_evaluation.py
       - config/config.yaml
-      - artifacts/data_ingestion/kidney-ct-scan-image
+      - artifacts/data_ingestion/train.csv
       - artifacts/training/model.h5
     params:
-      - IMAGE_SIZE
-      - BATCH_SIZE
+    - path_of_model
+    - training_data
+    - all_params
+    - mlflow_uri
+    - params_is_epochs
+    - params_is_batch_size
+    - params_is_vocab
+    - params_is_sent_length
+    - params_is_sen_length
     metrics:
     - scores.json:
         cache: false

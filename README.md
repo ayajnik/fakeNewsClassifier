@@ -71,3 +71,8 @@ Finally, monitor the deployed model performance using the MLflow UI and retrain 
 3. in the terminal type, dvc init to initiate the project
 4. Prepare the YAML file
 5. Execute dvc repro
+
+
+# Create front end beta user app
+
+With the help of Flasl, HTML and bootstrap, a beta version of this model was created for the user

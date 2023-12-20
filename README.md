@@ -63,3 +63,6 @@ MLflow is an open source platform for managing the end-to-end machine learning l
 First, log the text classification model as an MLflow artifact when training the model. Then, load the logged model in the MLflow model registry and deploy it to make predictions.
 
 Finally, monitor the deployed model performance using the MLflow UI and retrain models as needed to maintain accuracy over time.
+
+# Pipeline tracking with DVC
+

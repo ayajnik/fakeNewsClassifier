@@ -69,3 +69,5 @@ Finally, monitor the deployed model performance using the MLflow UI and retrain 
 1. Install dvc
 2. Install dvc extension on VS Code
 3. in the terminal type, dvc init to initiate the project
+4. Prepare the YAML file
+5. Execute dvc repro

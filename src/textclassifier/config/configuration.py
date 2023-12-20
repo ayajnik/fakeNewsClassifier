@@ -3,9 +3,9 @@ from pathlib import Path
 import os
 import tensorflow as tf
 from src.textclassifier.constants import *
-from src.textclassifier.utils.common import read_yaml, create_directories
+from src.textclassifier.utils.common import read_yaml, create_directories,save_json
 from src.textclassifier.entity.config_entity import (DataIngestionConfig,PrepareModelConfig,
-                                                        TrainingConfig)
+                                                        TrainingConfig,EvaluationConfig)
 
 ## reading the constant values from yaml file and then creating the root directory as stated in config.yaml
 
@@ -74,3 +74,18 @@ class ConfigurationManager:
         )
 
         return training_config
+
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model="artifacts/training/model.h5",
+            training_data="artifacts/data_ingestion/train.csv",
+            mlflow_uri="https://dagshub.com/ayajnik/fakeNewsClassifier.mlflow",
+            all_params=self.params,
+            #params_batch_size=self.params.BATCH_SIZE,
+            params_is_epochs=self.params.EPOCHS,
+            params_is_batch_size=self.params.BATCH_SIZE,
+            params_is_vocab=self.params.vocab,
+            params_is_sent_length=self.params.sent_length,
+            params_is_sen_length=self.params.sen_length
+        )
+        return eval_config

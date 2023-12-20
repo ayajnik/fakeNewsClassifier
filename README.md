@@ -50,6 +50,8 @@ After working on the data ingestion, prepare the model and save it in h5 model f
 
 Follow the same project workflow.
 
+![Alt text](<Screenshot 2023-12-19 at 4.50.31 PM.png>)
+
 # Model training
 
 We create a model training module that will read the data and train the model that we created in the previous step. The trained model is then saved in the artifacts folder, inside training folder.

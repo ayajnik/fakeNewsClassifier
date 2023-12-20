@@ -33,3 +33,16 @@ class TrainingConfig:
     params_is_vocab: int
     params_is_sent_length: int
     params_is_sen_length: int
+
+@dataclass(frozen=True)
+class EvaluationConfig:
+    path_of_model: Path
+    training_data: Path
+    all_params: dict
+    mlflow_uri: str
+    #params_batch_size: int
+    params_is_epochs: int
+    params_is_batch_size: int
+    params_is_vocab: int
+    params_is_sent_length: int
+    params_is_sen_length: int

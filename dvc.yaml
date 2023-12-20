@@ -14,11 +14,14 @@ stages:
       - src/textclassifier/pipeline/stage_02_prepare_base_model.py
       - config/config.yaml
     params:
-      - IMAGE_SIZE
-      - INCLUDE_TOP
-      - CLASSES
-      - WEIGHTS
-      - LEARNING_RATE
+      - root_dir
+      - model_path
+      - params_learning_rate
+      - params_epoch
+      - params_batch_size
+      - params_vocab
+      - params_sent_length
+      - params_sen_length
     outs:
       - artifacts/prepare_base_model
 

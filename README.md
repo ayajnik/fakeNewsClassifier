@@ -76,3 +76,7 @@ Finally, monitor the deployed model performance using the MLflow UI and retrain 
 # Create front end beta user app
 
 With the help of Flasl, HTML and bootstrap, a beta version of this model was created for the user
+
+# Containerize the project
+
+Create a docker file which will use the python image, copy the dependancy file and execute the app.py file which constains the user front-end deployment

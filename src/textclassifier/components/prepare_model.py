@@ -29,9 +29,8 @@ class PrepareBaseModel:
         embedding_vector_features=40
         model=Sequential()
         model.add(Embedding(self.config.params_vocab,embedding_vector_features,input_length=self.config.params_sent_length))
-        #model.add(LSTM(100))
-        model.add(LSTM(50, activation='relu'))
-
+        model.add(LSTM(100))
+        #model.add(LSTM(50, activation='sigmoid'))
         model.add(Dense(1,activation='sigmoid'))
         model.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
         print(model.summary())

@@ -80,3 +80,5 @@ With the help of Flasl, HTML and bootstrap, a beta version of this model was cre
 # Containerize the project
 
 Create a docker file which will use the python image, copy the dependancy file and execute the app.py file which constains the user front-end deployment
+
+# Github actions
